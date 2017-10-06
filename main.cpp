@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	string string;
-	int result, x;
+	int result, x,a;
 	char op;
 	getline(cin,string);
 	istringstream stream(string);
@@ -19,10 +19,10 @@ int main()
 	        else if(op=='-') result = result-x;
 	        else if(op=='*') result = result*x;
 	        else if(op=='/') {
-			if (x == 0) cout<<"Error";
+			if (x == 0) {cout<<"An error has occurred while division by zero";a=1;}
 			else result = result/x;
 			}
                 else {cout<<"Error"; stop = true;}
 	}
-        if (!stop) cout<<result;
+        if (!stop) { if(a!=1) cout<<result;};
 }
