@@ -16,10 +16,10 @@ int main()
 	while(stream>>op) {
 		stream>>x;
 		if(op=='+') result = result+x;
-	        else if(op=='-') result = itog-x;
-	        else if(op=='*') result = itog*x;
+	        else if(op=='-') result = result-x;
+	        else if(op=='*') result = result*x;
 	        else if(op=='/') {
-			if (middle == 0) cout<<"Error";
+			if (x == 0) cout<<"Error";
 			else result = result/x;
 			}
                 else {cout<<"Error"; stop = true;}
